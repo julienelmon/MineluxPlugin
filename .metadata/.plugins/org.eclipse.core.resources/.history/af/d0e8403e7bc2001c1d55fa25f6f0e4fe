@@ -1,0 +1,16 @@
+package fr.geveix.projettwitch.database;
+
+import java.sql.Connection;import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerJoinEvent;
+
+public class DatabaseConnector {
+	
+	private Connection con = null;
+	
+	public void connect() {
+		System.out.println("	@EventHandler\r\n"
+				+ "	public void join(PlayerJoinEvent e) {\r\n"
+				+ "		\r\n"
+				+ "	}Connexion à la base de données")
+	}
+}

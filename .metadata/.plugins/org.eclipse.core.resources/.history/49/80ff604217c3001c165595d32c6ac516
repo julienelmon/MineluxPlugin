@@ -1,0 +1,25 @@
+package fr.geveix.projettwitch.commands;
+
+import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+import fr.geveix.projettwitch.Main;
+
+public class CommandRefreshData implements CommandExecutor {
+	
+	private Main main;
+
+	public CommandRefreshData(Main main) {
+		this.main = main;
+	}
+	
+	@Override
+	public boolean onCommannd(CommandSender sender, Command cmd, String msg, String[] arg) {
+
+		return false;
+	}
+}

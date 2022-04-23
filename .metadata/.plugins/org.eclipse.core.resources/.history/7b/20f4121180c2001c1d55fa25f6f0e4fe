@@ -1,0 +1,42 @@
+package fr.geveix.projettwitch.database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import fr.geveix.projettwitch.Main;
+
+public class DatabaseConnector {
+	
+	private Connection con = null;
+	
+	public DatabaseConnector(Main main) {
+		connect();
+	}
+
+
+	public void connect() {
+		System.out.println("[ProjectTwitch] Connexion à la base de données");
+		try {
+			this.con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/minelux", "root", "");
+		} catch (SQLException e) {
+			System.out.println("[ProjectTwitch] Impossible de se connecter à la base de données");
+		}
+	}
+	
+	public void disconnect() {
+		try {
+			this.con.close();
+			System.out.println("[ProjectTwitch] Déconnexion réussie !");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("[ProjectTwitch] Impossible de se déconnecter à la base de données");
+		}
+	}
+	
+	public void checkConnection() {
+		if(this.con == null) {
+			connect();
+		}
+	}
+}

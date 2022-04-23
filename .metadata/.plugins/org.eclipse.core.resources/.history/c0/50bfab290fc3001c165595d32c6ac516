@@ -1,0 +1,5 @@
+name: ProjetTwitch
+main: fr.geveix.projettwitch.Main
+version: 1.0
+api-version: "1.13"
+author: Geveix

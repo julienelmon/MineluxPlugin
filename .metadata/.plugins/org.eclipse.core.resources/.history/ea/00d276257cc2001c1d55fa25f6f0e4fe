@@ -1,0 +1,14 @@
+package fr.geveix.projettwitch.database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DatabaseConnector {
+	
+	private Connection con = null;
+	
+	public void connect() {
+		System.out.println("[ProjectTwitch] Connexion à la base de données");
+		this.con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/minelux", "user", null);
+	}
+}

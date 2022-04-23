@@ -1,0 +1,12 @@
+package fr.geveix.projettwitch.database;
+
+import java.sql.Connection;
+
+public class DatabaseConnector {
+	
+	private Connection con = null;
+	
+	public void connect() {
+		System.out.println("[ProjectTwitch] Connexion à la base de données")
+	}
+}
