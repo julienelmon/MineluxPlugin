@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.bukkit.plugin.java.JavaPlugin"/>
     <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerJoinEvent"/>
     <fullyQualifiedTypeName name="org.bukkit.event.EventHandler"/>
@@ -16,4 +15,9 @@
     <fullyQualifiedTypeName name="org.apache.logging.log4j.core.config.plugins.util.PluginManager"/>
     <fullyQualifiedTypeName name="org.bukkit.plugin.PluginManager"/>
     <fullyQualifiedTypeName name="org.bukkit.event.Listener"/>
+    <fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
+    <fullyQualifiedTypeName name="org.bukkit.OfflinePlayer"/>
+    <fullyQualifiedTypeName name="org.bukkit.World"/>
+    <fullyQualifiedTypeName name="org.bukkit.inventory.ItemStack"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

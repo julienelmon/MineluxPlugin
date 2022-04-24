@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import fr.geveix.projettwitch.Main;
 
@@ -31,7 +32,8 @@ public class Database {
 					return true;
 				
 			} catch (SQLException e) {
-				System.out.println("[ProjectTwitch] Erreur BDD");
+				System.out.println(this.main.getConfig().getString("messages.prefix") + 
+						this.main.getConfig().getString("messages.dberror"));
 				e.printStackTrace();
 			} finally {
 				try {
@@ -65,7 +67,8 @@ public class Database {
 					ps.setLong(3, player.getFoodLevel());
 					ps.setLong(4, (long) player.getHealth());
 					ps.setString(5, player.getName().toString());
-					System.out.println("[ProjectTwitch] Joueur entré");
+					System.out.println(this.main.getConfig().getString("messages.prefix") + 
+							this.main.getConfig().getString("messages.playercreated"));
 					ps.executeUpdate();
 				} else {
 					updateAccount(player);
@@ -92,7 +95,8 @@ public class Database {
 					ps.setLong(2, player.getFoodLevel());
 					ps.setLong(3, (long) player.getHealth());
 					ps.setString(4, player.getUniqueId().toString());
-					System.out.println("[ProjectTwitch] Données modifié");
+					System.out.println(this.main.getConfig().getString("messages.prefix") + 
+							this.main.getConfig().getString("messages.playercreated"));
 					ps.executeUpdate();
 				} catch (SQLException e) {
 					e.printStackTrace();
@@ -103,6 +107,17 @@ public class Database {
 			}
 		}
 	return true;
+	}
+	
+	public int updateInventory(Player player) {
+		
+		int amount = 0;
+		for (int i = 0; i < 36; i++) {
+			System.out.println("test");
+			ItemStack slot = player.getInventory().getItem(i);
+			amount += slot.getAmount();
+		}
+		return 1;
 	}
 	
 	

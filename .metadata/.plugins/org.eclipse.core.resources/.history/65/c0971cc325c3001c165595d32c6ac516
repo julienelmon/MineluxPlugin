@@ -1,0 +1,21 @@
+messages:
+  prefix: "MineluxPlugin - "
+  running: "Run"
+  shutdown: "Stop"
+  updateprofile: "Updated proile"
+  syntaxerror: "Syntax Error"
+  connecterror: "Player disconnected"
+  playerupdatedprefix: "Player"
+  playerupdatedsuffix: "Updated"
+  playercreated: "Player created"
+  dberror: "Database Error"
+  playermodified: "Data Modified"
+  dbconnected: "Database connected"
+  dbdisconnected: "Database disconnected"
+
+database:
+   host: "127.0.0.1"
+   name: "minelux"
+   user: "root"
+   password: ""
+   

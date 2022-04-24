@@ -23,10 +23,10 @@ public class CommandRefreshData implements CommandExecutor {
 			Player player = (Player) sender;
 			if(cmd.getName().equalsIgnoreCase("refreshdata")) {
 				this.main.getDatabase().updateAccount(player);
-				player.sendMessage("[ProjetTwitch] Profil mis à jour");	
+				player.sendMessage(this.main.getConfig().getString("messages.prefix") + this.main.getConfig().getString("messages.updateprofile"));	
 				return true;
 			} else {
-				player.sendMessage("[ProjetTwitch] Erreur de syntaxe");	
+				player.sendMessage(this.main.getConfig().getString("messages.prefix") + this.main.getConfig().getString("messages.syntaxerror"));	
 				return false;
 			}
 		} else {
@@ -35,10 +35,13 @@ public class CommandRefreshData implements CommandExecutor {
 				
 				if(player != null) {
 					this.main.getDatabase().updateAccount(player);
-					System.out.println("[ProjetTwitch] Le joueur " + player.toString() + " à été mise a jour");
+					System.out.println(this.main.getConfig().getString("messages.prefix") + 
+							this.main.getConfig().getString("messages.playerupdatedprefix") + 
+							player.toString() + 
+							this.main.getConfig().getString("messages.playerupdatedsuffix"));
 					return true;
 				} else {
-					System.out.println("[ProjetTwitch] Erreur le joueur n'est pas connecté ");
+					System.out.println(this.main.getConfig().getString("messages.connecterror"));
 					return false;
 				}
 			}

@@ -1,0 +1,12 @@
+messages:
+  prefix: "MineluxPlugin - "
+  running: "Run"
+  shutdown: "Stop"
+  updateprofile: "Updated proile"
+  syntaxerror: "Syntax Error"
+  connecterror: "Player disconnected"
+  playerupdatedprefix: "Player"
+  playerupdatedsuffix: "Updated"
+  playercreated: "Player insert"
+  dberror: "Database Error"
+  datamo

@@ -1,0 +1,4 @@
+messages:
+  prefix: "MineluxPlugin - "
+  running: "Run"
+  shutdown: "Stop"
